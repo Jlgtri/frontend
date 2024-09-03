@@ -1,0 +1,370 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+
+@import url("https://fonts.cdnfonts.com/css/helvetica-neue-5");
+
+:root {
+  --green-Color: #00ff91;
+  --text-color-111: #111;
+  --text-color-252525: #252525;
+  --bg-Greys: #191919;
+}
+
+html {
+  overflow: auto !important;
+  padding: 0px !important;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #000000;
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Helvetica Neue", sans-serif !important; 
+}
+.ConnectButton button {
+  background-image: linear-gradient(90deg, #00ff91, #00bd6b) !important;
+  color: var(--bg-Greys) !important;
+  font-weight: 500 !important;
+  width: 100% !important;
+  height: 48px !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+}
+.ConnectButtonH button {
+  background-image: linear-gradient(90deg, #00ff91, #00bd6b) !important;
+  color: var(--bg-Greys) !important;
+  font-weight: 500 !important;
+}
+.bg-Green {
+  /* background-color: var(--green-Color); */
+  background-image: linear-gradient(90deg, #00ff91, #00bd6b) !important;
+  color: var(--text-color-111);
+}
+
+.card-color {
+  background-color: var(--bg-Greys);
+  border: 1px solid #303030;
+  transition: 0.5s all ease-in-out;
+}
+
+.text-Greens {
+  color: var(--green-Color);
+}
+.text-footertext {
+  --tw-text-opacity: 1;
+  color: rgb(145 149 166 / var(--tw-text-opacity));
+  font-size: 14px;
+}
+.bg-color191919 {
+  background-color: var(--bg-Greys);
+  border: 1px solid #303030;
+  transition: 0.5s all ease-in-out;
+}
+
+.bg-color252525 {
+  background-color: var(--text-color-252525);
+  border: 1px solid #303030;
+  transition: 0.5s all ease-in-out;
+}
+
+.card-color:hover,
+.bg-color191919:hover,
+.bg-color252525:hover {
+  border: 1px solid #00ff9047;
+}
+
+.dotLive {
+  background-color: var(--green-Color);
+  border-radius: 100%;
+  transition: background-color 0.5s;
+  width: 10px;
+  height: 10px;
+  line-height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: none;
+  z-index: 9;
+}
+
+.dotLive:before {
+  content: "";
+  border: 2px solid var(--green-Color);
+  position: absolute;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  opacity: 0;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: zoomBig 5s linear infinite;
+  -webkit-animation-delay: 4s;
+  animation-delay: 4s;
+}
+
+.dotLive:after {
+  content: "";
+  border: 2px solid var(--green-Color);
+  position: absolute;
+  opacity: 0;
+  z-index: 0;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  animation: zoomBig 5s linear infinite;
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.dotLive:after,
+.dotLive:before {
+  border: 2px solid var(--green-Color) !important;
+  width: 30px !important;
+  height: 30px !important;
+}
+
+@keyframes zoomBig {
+  0% {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 1;
+    border-width: 3px;
+  }
+
+  40% {
+    opacity: 0.5;
+    border-width: 2px;
+  }
+
+  65% {
+    border-width: 1px;
+  }
+
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    border-width: 1px;
+  }
+}
+
+/* how to buy page css */
+
+.gradient_border {
+  width: 78%;
+  height: 3px;
+  background: linear-gradient(to right, #00ff90, #b845ff, #9BF8F4);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  margin: auto;
+}
+
+.gradient_border2 {
+  width: 74%;
+}
+
+.gradient_border3 {
+  width: 61%;
+}
+
+.gradient_border4 {
+  width: 93%;
+}
+
+.vertical-lr {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  position: absolute;
+  transform: rotate(180deg);
+  left: -32px;
+}
+
+.Private_btn {
+  border: 1px solid;
+  padding: 10px 15px;
+  color: var(--bg-Greys);
+  border-radius: 8px;
+  font-weight: 500;
+  transition: 0.5s all ease-in;
+}
+
+button {
+  transition: 0.5s all ease-in;
+}
+
+.Private_btn:hover {
+  color: #fff;
+  border: 1px solid;
+}
+
+.gradientBorder {
+  padding: 1px;
+  background: linear-gradient(90deg, #00ff90, #b845ff, #9BF8F4);
+  /* background-size: 300% 300%; */ 
+  /* animation: gradient 15s ease infinite; */
+  border-radius: 8px; 
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.blox-token-img {
+  position: absolute;
+  top: -116px;
+  left: 0;
+  right: 0;
+  animation: upDown 5s ease-in-out infinite, flip 4s linear infinite;
+  transform-style: preserve-3d;
+  z-index: 9;
+}
+
+@keyframes upDown {
+  0%,
+  100% {
+    top: -90px;
+    /* Starting and ending position */
+  }
+
+  50% {
+    top: -146px;
+    /* Midpoint position */
+  }
+}
+
+@keyframes flip {
+  0%,
+  100% {
+    transform: rotateY(0deg);
+    /* Starting and ending position */
+  }
+
+  50% {
+    transform: rotateY(180deg);
+    /* Midpoint position (flipped) */
+  }
+}
+
+.Coming-Soon-Btn {
+  color: var(--green-Color);
+  border: 1px solid var(--green-Color);
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+/* scroll bar css */
+
+.scrollBars::-webkit-scrollbar-track {
+  border-radius: 3px;
+  background-color: transparent;
+}
+
+.scrollBars::-webkit-scrollbar {
+  width: 3px;
+  background-color: transparent;
+}
+
+.scrollBars::-webkit-scrollbar-thumb {
+  border-radius: 50px;
+  background-color: var(--text-color-111);
+}
+
+.accordion {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.accordion-item {
+  margin-bottom: 10px;
+  border-bottom: 1px solid var(--text-color-252525);
+}
+
+.accordion-title {
+  padding: 15px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-title h3 {
+  margin: 0;
+}
+
+.accordion-title span {
+  font-size: 18px;
+}
+
+.accordion-content {
+  padding: 15px;
+}
+
+/* media screen css start here */
+
+@media only screen and (max-width: 480px) {
+  .vertical-lr {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    position: absolute;
+    transform: rotate(0deg);
+    left: 33px;
+    top: 3px;
+    background: var(--text-color-252525);
+    padding: 0px 10px;
+    border-radius: 12px;
+  }
+
+  .gradient_border {
+    width: 25%;
+  }
+
+  .gradient_border2 {
+    width: 12%;
+  }
+
+  .gradient_border3 {
+    width: 57%;
+    top: 31px;
+  }
+
+  .gradient_border4 {
+    width: 79%;
+  }
+
+  .blox-token-img {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+}
+
+/* media screen css end here  */
