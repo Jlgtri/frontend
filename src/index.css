@@ -327,6 +327,22 @@ button {
   padding: 15px;
 }
 
+
+
+/* crancy-coming-soon__inside css start  */
+
+.crancy-coming-soon__inside {
+  background-image: url('https://bloxchain.network/images/home/banner-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+ 
+/* coming soon css page  */
+
 /* media screen css start here */
 
 @media only screen and (max-width: 480px) {

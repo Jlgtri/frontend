@@ -337,7 +337,7 @@ const HowtoBuy = () => {
                           />
                         </div>
                         <div className="heading text-2xl text-white font-medium">
-                          Buy with Linea
+                          Buy with ETH in Linea
                         </div>
                       </div>
                       <div className="text-content text-white font-normal text-sm">

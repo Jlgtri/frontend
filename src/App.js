@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Header from "./components/headers/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./components/mainhome/Home";
+import ComingSoon from "./components/mainhome/custom/ComingSoon";
 import Footer from "./components/footer/Footer";
 import callApi from "./api/axiosInstance";
 import { useDispatch } from 'react-redux';
@@ -53,6 +54,7 @@ const App = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/coming-soon" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </BrowserRouter>

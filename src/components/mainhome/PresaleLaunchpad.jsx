@@ -39,134 +39,138 @@ const PresaleLaunchpad = ({ presale }) => {
                 <Container maxWidth="lg">
                     {tabs === "Private" && (
                         <Grid container spacing={2}>
-                            <Grid item lg="4" md="4" sm="12" xs="12">
-                                <div className="rounded-lg gradientBorder">
-                                    <Box className="bg-color191919 rounded-lg p-4 h-full">
-                                        <div className="flex items-center justify-between">
-                                            <div className="text-white text-lg font-normal">Private Round</div>
-                                            <div className="flex items-center gap-3 bg-black px-4 py-1.5 rounded">
-                                                <span class="dotLive" />
-                                                <div className="text-Greens font-normal text-sm uppercase">Sold</div>
+                            {presale.map((item, index) => {
+                                if (item.name == "Private Sale") {
+                                    return (
+                                        <Grid item lg="4" md="4" sm="12" xs="12">
+                                            <div className="rounded-lg gradientBorder">
+                                                <Box className="bg-color191919 rounded-lg p-4 h-full">
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="text-white text-lg font-normal">Private Round</div>
+                                                        <div className="flex items-center gap-3 bg-black px-4 py-1.5 rounded">
+                                                            <span class="dotLive" />
+                                                            <div className="text-Greens font-normal text-sm uppercase">{item.status}</div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="my-4">
+                                                        <Divider sx={{ borderColor: "#101010" }} />
+                                                    </div>
+                                                    <div className="privateSale_list">
+                                                        <ul>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Tokens :</span>
+                                                                <span className="text-Greens w-1/2">{getMe2DecimalPointsWithCommas(item.tokens)} BLOX</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Price :</span>
+
+                                                                <span className="text-Greens w-1/2">${item.price}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Cliff :</span>
+
+                                                                <span className="text-Greens w-1/2">{item.cliff}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Vesting Period :</span>
+
+                                                                <span className="text-Greens w-1/2">{item.vesting_period}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Vesting Month :</span>
+                                                                <span className="text-Greens w-1/2">{item.vesting_month} </span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">TGE Unlock :</span>
+                                                                <span className="text-Greens w-1/2">{parseFloat(item?.tge_unlock)}%</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right"></span>
+
+                                                                <span className="text-Greens w-1/2"></span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right"></span>
+                                                                <span className="text-Greens w-1/2"></span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Box>
                                             </div>
-                                        </div>
-                                        <div className="my-4">
-                                            <Divider sx={{ borderColor: "#101010" }} />
-                                        </div>
-                                        <div className="privateSale_list">
-                                            <ul>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Tokens :</span>
-                                                    <span className="text-Greens w-1/2">70,000,000 BLOX</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Price :</span>
+                                        </Grid>
+                                    )
+                                }
 
-                                                    <span className="text-Greens w-1/2">$0.01</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Cliff :</span>
-
-                                                    <span className="text-Greens w-1/2">4 Month</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Vesting Period :</span>
-
-                                                    <span className="text-Greens w-1/2">3 Months</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Vesting Month :</span>
-                                                    <span className="text-Greens w-1/2">12 </span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">TGE Unlock :</span>
-                                                    <span className="text-Greens w-1/2">0%</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Minimum buy :</span>
-
-                                                    <span className="text-Greens w-1/2">$64</span>
-                                                </li>
-                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                    <span className="text-white w-1/2 text-right">Maximum buy :</span>
-                                                    <span className="text-Greens w-1/2"> $16k</span>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </Box>
-                                </div>
-                            </Grid>
-
+                            })}
                         </Grid>
                     )}
                     {/* Presale Round  Launchpad area  */}
                     {tabs === "Presale" && (
                         <Grid container spacing={2}>
-                            <Grid container spacing={2}>
-                                {presale.map((item, index) => {
-                                    if (item.name !== "Private Sale") {
-                                        return (
-                                            <Grid item lg="4" md="4" sm="12" xs="12">
-                                                <div className="rounded-lg gradientBorder">
-                                                    <Box className="bg-color191919 rounded-lg p-4 h-full">
-                                                        <div className="flex items-center justify-between">
-                                                            <div className="text-white text-lg font-normal">Round - {index + 1}</div>
-                                                            <div className="flex items-center gap-3 bg-black px-4 py-1.5 rounded">
-                                                                <span class="dotLive" />
-                                                                <div className="text-Greens font-normal text-sm uppercase">{item.status}</div>
-                                                            </div>
+                            {presale.map((item, index) => {
+                                if (item.name !== "Private Sale") {
+                                    return (
+                                        <Grid item lg="4" md="4" sm="12" xs="12">
+                                            <div className="rounded-lg gradientBorder">
+                                                <Box className="bg-color191919 rounded-lg p-4 h-full">
+                                                    <div className="flex items-center justify-between">
+                                                        <div className="text-white text-lg font-normal">Round - {index}</div>
+                                                        <div className="flex items-center gap-3 bg-black px-4 py-1.5 rounded">
+                                                            <span class="dotLive" />
+                                                            <div className="text-Greens font-normal text-sm uppercase">{item.status}</div>
                                                         </div>
-                                                        <div className="my-4">
-                                                            <Divider sx={{ borderColor: "#101010" }} />
-                                                        </div>
-                                                        <div className="privateSale_list">
-                                                            <ul>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Tokens :</span>
-                                                                    <span className="text-Greens w-1/2">{getMe2DecimalPointsWithCommas(item.tokens)} BLOX</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Price :</span>
+                                                    </div>
+                                                    <div className="my-4">
+                                                        <Divider sx={{ borderColor: "#101010" }} />
+                                                    </div>
+                                                    <div className="privateSale_list">
+                                                        <ul>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Tokens :</span>
+                                                                <span className="text-Greens w-1/2">{getMe2DecimalPointsWithCommas(item.tokens)} BLOX</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Price :</span>
 
-                                                                    <span className="text-Greens w-1/2">${item.price}</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Cliff :</span>
+                                                                <span className="text-Greens w-1/2">${item.price}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Cliff :</span>
 
-                                                                    <span className="text-Greens w-1/2">{item.cliff}</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Vesting Period :</span>
+                                                                <span className="text-Greens w-1/2">{item.cliff}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Vesting Period :</span>
 
-                                                                    <span className="text-Greens w-1/2">{item.vesting_period}</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Vesting Month :</span>
-                                                                    <span className="text-Greens w-1/2">{item.vesting_month} </span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">TGE Unlock :</span>
-                                                                    <span className="text-Greens w-1/2">{parseFloat(item?.tge_unlock)}%</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Minimum buy :</span>
+                                                                <span className="text-Greens w-1/2">{item.vesting_period}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Vesting Month :</span>
+                                                                <span className="text-Greens w-1/2">{item.vesting_month} </span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">TGE Unlock :</span>
+                                                                <span className="text-Greens w-1/2">{parseFloat(item?.tge_unlock)}%</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Minimum buy :</span>
 
-                                                                    <span className="text-Greens w-1/2">${getMe2DecimalPointsWithCommas(item.minimum_buy)}</span>
-                                                                </li>
-                                                                <li className="my-5 flex items-center gap-5 justify-between">
-                                                                    <span className="text-white w-1/2 text-right">Maximum buy :</span>
-                                                                    <span className="text-Greens w-1/2"> ${getMe2DecimalPointsWithCommas(item.maximum_buy)}</span>
-                                                                </li>
-                                                            </ul>
-                                                        </div>
-                                                    </Box>
-                                                </div>
-                                            </Grid>
+                                                                <span className="text-Greens w-1/2">${getMe2DecimalPointsWithCommas(item.minimum_buy)}</span>
+                                                            </li>
+                                                            <li className="my-5 flex items-center gap-5 justify-between">
+                                                                <span className="text-white w-1/2 text-right">Maximum buy :</span>
+                                                                <span className="text-Greens w-1/2"> ${getMe2DecimalPointsWithCommas(item.maximum_buy)}</span>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </Box>
+                                            </div>
+                                        </Grid>
 
-                                        )
-                                    }
+                                    )
+                                }
 
-                                })}
-                            </Grid>
+                            })}
                         </Grid>
                     )}
                 </Container>

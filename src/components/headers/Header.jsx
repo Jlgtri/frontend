@@ -16,11 +16,12 @@ import bloxLogo from "../../assets/BLOX-SVG_LOGO.svg";
 // };
 const navigation = [
   { name: "Home", href: "https://bloxchain.network/", current: true, target: "_blank" },
-  { name: "How to Buy", href: "./#how-to-buy", current: false, target: "" },
+  { name: "How to Buy", href: "./#how-to-buy", current: false, target: "" }, 
+  { name: "Referral", href: "./#Referral", current: false, target: "" }, 
   { name: "Docs", href: "https://bloxnetwork.gitbook.io/bloxnetwork", current: false, target: "_blank" },
-  { name: "Roadmap", href: "https://bloxnetwork.gitbook.io/bloxnetwork/roadmap", current: false, target: "_blank" },
+  { name: "Roadmap", href: "https://bloxchain.network/roadmap/", current: false, target: "_blank" },
   { name: "Bloxomics", href: "https://bloxnetwork.gitbook.io/bloxnetwork/bloxomics", current: false, target: "_blank" },
-  { name: "Airdrops", href: "/", current: false },
+  { name: "Airdrops", href: "./coming-soon", current: false },
 ];
 
 function classNames(...classes) {

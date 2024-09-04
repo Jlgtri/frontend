@@ -1,5 +1,5 @@
 import { Box, Container, Grid } from "@mui/material";
-import React from "react";
+import React, { useState } from "react";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
 import { useAccount } from 'wagmi';
 import { toast } from "react-toastify";
@@ -7,6 +7,7 @@ import { getMe2DecimalPointsWithCommas } from "../../contracts";
 import { useSelector } from "react-redux";
 
 const InviteYourFriends = ({ userDetail, userReferralData }) => {
+
     const { address, isConnected } = useAccount();
     const topTenWallet = useSelector((state) => state.blox.topTenWallets);
     const baseName = process.env.REACT_APP_BASENAME || '';
@@ -93,40 +94,51 @@ const InviteYourFriends = ({ userDetail, userReferralData }) => {
             <Container maxWidth="lg" sx={{ marginTop: '2rem' }}>
                 <Grid container spacing={2}>
                     <Grid item lg="12" md="12" sm="12" xs="12">
-                        <Box className="rounded-xl p-2 bg-color191919 overflow-x-auto">
+                        {topTenWallet.length > 0 ? (
+                            <Box className="rounded-xl p-2 bg-color191919 overflow-x-auto">
+                                <h2 className="text-2xl font-semibold mb-4 text-center text-black p-3 rounded-t-md" style={{ backgroundColor: '#00ff99' }}
+                                >
+                                    Winner List
+                                </h2>
+                                <table className="min-w-full">
+                                    <thead>
+                                        <tr>
+                                            <th className="text-left tracking-wider">
+                                                <div className="bg-color191919 rounded-sm p-3 text-gray-300 font-normal">Wallet Address</div>
+                                            </th>
+                                            <th className="text-left tracking-wider min-w-40">
+                                                <div className="bg-color191919 rounded-sm p-3 text-gray-300 font-normal">BLOX Earned</div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody className="">
+                                        {topTenWallet.map((wallet, index) => (
+                                            <tr key={index}>
+                                                <td className="">
+                                                    <div className={`bg-color191919 rounded-sm p-3 text-gray-300 ${index < 3 ? 'font-bold' : 'font-normal'
+                                                        }`}>{wallet.address}
+                                                    </div>
+                                                </td>
+                                                <td className="">
+                                                    <div className={`bg-color191919 rounded-sm p-3 text-gray-300 ${index < 3 ? 'font-bold' : 'font-normal'
+                                                        }`}>{getMe2DecimalPointsWithCommas(wallet.blox)}</div>
+                                                </td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </Box>
+
+                        ) : (
                             <h2 className="text-2xl font-semibold mb-4 text-center text-black p-3 rounded-t-md" style={{ backgroundColor: '#00ff99' }}
                             >
-                                Winner List
+                                Competition will start at Round 1
                             </h2>
-                            <table className="min-w-full">
-                                <thead>
-                                    <tr>
-                                        <th className="text-left tracking-wider">
-                                            <div className="bg-color191919 rounded-sm p-3 text-gray-300 font-normal">Wallet Address</div>
-                                        </th>
-                                        <th className="text-left tracking-wider min-w-40">
-                                            <div className="bg-color191919 rounded-sm p-3 text-gray-300 font-normal">BLOX Earned</div>
-                                        </th>
-                                    </tr>
-                                </thead>
+                        )
 
-                                <tbody className="">
-                                    {topTenWallet.map((wallet, index) => (
-                                        <tr key={index}>
-                                            <td className="">
-                                                <div className={`bg-color191919 rounded-sm p-3 text-gray-300 ${index < 3 ? 'font-bold' : 'font-normal'
-                                                    }`}>{wallet.address}
-                                                </div>
-                                            </td>
-                                            <td className="">
-                                                <div className={`bg-color191919 rounded-sm p-3 text-gray-300 ${index < 3 ? 'font-bold' : 'font-normal'
-                                                    }`}>{getMe2DecimalPointsWithCommas(wallet.blox)}</div>
-                                            </td>
-                                        </tr>
-                                    ))}
-                                </tbody>
-                            </table>
-                        </Box>
+                        }
+
                     </Grid>
                 </Grid>
             </Container>

@@ -13,27 +13,27 @@ import linkdin from '../../assets/iconsS/linkdin.svg'
 const Footer = () => {
     return (
         <div className="py-5 relative isolate overflow-hidden bg-black">
-            <div class="flex mt-4 lg:justify-center md:justify-center sm:justify-center justify-center sm:mt-0 gap-3">
-                <Link to="https://t.me/bloxnetwork" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={telegram} className="w-7 animate-pulse" />
+            <div class="flex mt-4 lg:justify-center md:justify-center sm:justify-center justify-center sm:mt-0 lg:gap-3 md:gap-3 sm:gap-2 gap-2">
+                <Link to="https://t.me/bloxnetwork" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={telegram} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://www.youtube.com/@BLOXNetworkY" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={youtube} className="w-7 animate-pulse" />
+                <Link to="https://www.youtube.com/@BLOXNetworkY" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={youtube} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://coinmarketcap.com/community/profile/BLOXNETWORK/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={coinmarketcap} className="w-7 animate-pulse" />
+                <Link to="https://coinmarketcap.com/community/profile/BLOXNETWORK/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={coinmarketcap} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://x.com/BloxNetworkX" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={twitter} className="w-7 animate-pulse" />
+                <Link to="https://x.com/BloxNetworkX" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={twitter} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://bloxnetworkm.medium.com/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={medialog} className="w-7 animate-pulse" />
+                <Link to="https://bloxnetworkm.medium.com/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={medialog} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://discord.com/invite/CDXuMcTV" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={discord} className="w-7 animate-pulse" />
+                <Link to="https://discord.com/invite/CDXuMcTV" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={discord} className="w-6 h-6 animate-pulse" />
                 </Link> 
-                <Link to="https://www.linkedin.com/in/blox-network-26b3a2325/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 w-14 h-14 flex items-center justify-center rounded-full">
-                    <img src={linkdin} className="w-7 animate-pulse" />
+                <Link to="https://www.linkedin.com/in/blox-network-26b3a2325/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
+                    <img src={linkdin} className="w-6 h-6 animate-pulse" />
                 </Link> 
             </div>
             <footer class="mt-10">
@@ -49,8 +49,8 @@ const Footer = () => {
                                 </p>
                             </div>
                         </div>
-                        <div class="grid grid-cols-4 gap-5 sm:gap-5 sm:grid-cols-4 lg:w-1/2 md:w-1/2 sm:w-full w-full">
-                            <div>
+                        <div class="flex lg:flex-nowrap md:flex-nowrap flex-wrap gap-8 lg:w-1/2 md:w-1/2 sm:w-full w-full">
+                            <div className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-1/2">
                                 <h2 class="mb-6 text-sm font-normal text-white uppercase">Product</h2>
                                 <ul class="">
                                     <li class="mb-4">
@@ -80,7 +80,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-1/2">
                                 <h2 class="mb-6 text-sm font-normal text-white uppercase">Company</h2>
                                 <ul class="">
                                     <li class="mb-4">
@@ -105,7 +105,7 @@ const Footer = () => {
                                     </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="lg:w-1/4 md:w-1/3 sm:w-1/2 w-full">
                                 <h2 class="mb-6 text-sm font-normal text-white uppercase">Resources</h2>
                                 <ul class="">
                                     <li class="mb-4">
@@ -128,9 +128,15 @@ const Footer = () => {
                                             Roadmaps
                                         </Link>
                                     </li>
+                                    <li class="mb-4">
+                                        <Link target="_blank" to="./#Referral" class="hover:text-white transition-all text-footertext font-normal no-underline text-sm">
+                                        Referral
+                                        </Link>
+                                    
+                                    </li>
                                 </ul>
                             </div>
-                            <div>
+                            <div className="lg:w-1/4 md:w-1/3 sm:w-full w-full">
                                 <h2 class="mb-6 text-sm font-normal text-white uppercase">Legal</h2>
                                 <ul class="">
                                     <li class="mb-4">

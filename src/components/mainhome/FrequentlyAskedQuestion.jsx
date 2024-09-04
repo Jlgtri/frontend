@@ -56,7 +56,7 @@ const FrequentlyAskedQuestion = () => {
     },
     {
       title: 'When Can I Claim My BLOX?',
-      content: 'You can claim your BLOX coins according to the Presale vesting period.',
+      content: 'As soon as the fundraising rounds are over, it will be TGE (Token Generation Event) and investors can claim according to the vesting of each round..',
     },
     {
       title: 'Is there a way to contact support?',
