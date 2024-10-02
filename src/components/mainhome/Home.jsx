@@ -117,7 +117,7 @@ const Home = () => {
         (Number(activePresale.current) * 100) / Number(activePresale.total);
       setTargetDate(Date.parse(activePresale.presale.starts_at));
       setProgress(soldPercentage);
-      setTimeLeft(calculateTimeLeft(targetDate));
+      setTimeLeft(calculateTimeLeft(Date.parse(activePresale.presale.starts_at)));
       customReadFunction();
     }
   }, [activePresale, selectedCurrency, isConnected]);
