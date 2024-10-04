@@ -340,7 +340,7 @@ const Home = () => {
                 sm="12"
                 xs="12">
                 <div>
-                  <TimerCounter targetDate={targetDate} />
+                  <TimerCounter targetDate={0} />
                 </div>
                 <div className="card-color rounded-2xl lg:p-6 md:p-8 sm:p-5 p-3">
                   <div className="progress_liver_content">
