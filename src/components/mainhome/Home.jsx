@@ -117,7 +117,7 @@ const Home = () => {
         (Number(activePresale.current) * 100) / Number(activePresale.total);
       setTargetDate(Date.parse(activePresale.presale.starts_at));
       setProgress(soldPercentage);
-      setTimeLeft(calculateTimeLeft(targetDate));
+      setTimeLeft(calculateTimeLeft(Date.parse(activePresale.presale.starts_at)));
       customReadFunction();
     }
   }, [activePresale, selectedCurrency, isConnected]);
@@ -340,7 +340,7 @@ const Home = () => {
                 sm="12"
                 xs="12">
                 <div>
-                  <TimerCounter targetDate={targetDate} />
+                  <TimerCounter targetDate={0} />
                 </div>
                 <div className="card-color rounded-2xl lg:p-6 md:p-8 sm:p-5 p-3">
                   <div className="progress_liver_content">

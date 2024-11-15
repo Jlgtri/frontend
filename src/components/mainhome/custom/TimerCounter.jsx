@@ -26,7 +26,7 @@ const TimerCounter = ({ targetDate }) => {
     }, 1000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [targetDate]);
   return Object.keys(timeLeft).length ? (
     <>
       {' '}
