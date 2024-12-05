@@ -18,7 +18,6 @@ const PresaleLaunchpad = ({ presale }) => {
               className="Private_btn"
               onClick={() => setTabs('Private')}
               style={{
-                display: 'none',
                 background:
                   tabs === 'Private' ? 'var(--green-Color)' : 'transparent',
                 color: tabs === 'Private' ? 'var(--text-color-111)' : 'white',

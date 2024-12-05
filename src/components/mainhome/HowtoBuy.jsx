@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
-import logoBlackbase from "../../assets/base.svg";
 import mobilesimg from "../../assets/blox-icon.png";
+import logoBlackbase from "../../assets/base.svg";
 
 const HowtoBuy = () => {
   return (
@@ -326,7 +326,7 @@ const HowtoBuy = () => {
                       </div>
                     </div>
                   </Grid>
-                  {/* <Grid item lg="4" md="4" sm="6" xs="12">
+                  <Grid item lg="4" md="4" sm="6" xs="12">
                     <div className="bg-color252525 p-4 rounded-xl h-full">
                       <div className="flex items-center gap-3 justify-start mb-4">
                         <div className="img_row w-16 h-16 bg-black rounded-lg flex items-center justify-center">
@@ -356,7 +356,7 @@ const HowtoBuy = () => {
                         </ul>
                       </div>
                     </div>
-                  </Grid> */}
+                  </Grid>
                 </Grid>
               </div>
             </div>
