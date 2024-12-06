@@ -1,12 +1,13 @@
 import { http, createConfig } from '@wagmi/core'
 import { Web3 } from 'web3';
-import { mainnet, bsc, polygon, arbitrum, optimism, base, linea } from '@wagmi/core/chains'
+import { mainnet, bsc, polygon, arbitrum, optimism, base, linea, bscTestnet } from '@wagmi/core/chains'
 
 export const config = createConfig({
-    chains: [mainnet, optimism, bsc, polygon, arbitrum, base, linea],
+    chains: [mainnet, optimism, bsc, bscTestnet, polygon, arbitrum, base, linea],
     transports: {
         [mainnet.id]: http(),
         [bsc.id]: http(),
+        [bscTestnet.id]: http(),
         [polygon.id]: http(),
         [arbitrum.id]: http(),
         [optimism.id]: http(),

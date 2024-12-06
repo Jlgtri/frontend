@@ -1,10 +1,10 @@
 import { Box, Container, Grid } from "@mui/material";
-import React, { useState } from "react";
 import { ConnectButton } from '@rainbow-me/rainbowkit';
-import { useAccount } from 'wagmi';
-import { toast } from "react-toastify";
-import { getMe2DecimalPointsWithCommas } from "../../contracts";
+import React from "react";
 import { useSelector } from "react-redux";
+import { toast } from "react-toastify";
+import { useAccount } from 'wagmi';
+import { getMe2DecimalPointsWithCommas } from "../../contracts";
 
 const InviteYourFriends = ({ userDetail, userReferralData }) => {
 

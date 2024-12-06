@@ -1,25 +1,24 @@
 .timer-box {
-    display: grid;
-    padding: 5px 10px;
-    background-color: var(--bg-Greys);
-    border: 1px solid #303030;
-    border-radius: 6px;
-    width: 100px;
-    height: 100px;
-  }
+  display: grid;
+  padding: 5px 10px;
+  background-color: var(--bg-Greys);
+  border: 1px solid #303030;
+  border-radius: 6px;
+  width: 100px;
+  height: 100px;
+}
 
-  .time-number {  
-    font-weight: 600;
-    color: var(--green-Color); 
-    font-size: 55px;
-    margin: 0px; 
-  }
-  
-  .time-label {
-    margin: 0 5px;
-    font-size: 0.8em;
-    color: #cdcccc;
-    position: relative;
-    top: -14px;
-  }
-  
+.time-number {
+  font-weight: 600;
+  color: var(--green-Color);
+  font-size: 55px;
+  margin: 0px;
+}
+
+.time-label {
+  margin: 0 5px;
+  font-size: 0.8em;
+  color: #cdcccc;
+  position: relative;
+  top: -14px;
+}

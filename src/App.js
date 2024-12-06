@@ -6,7 +6,8 @@ import ComingSoon from "./components/mainhome/custom/ComingSoon";
 import Footer from "./components/footer/Footer";
 import callApi from "./api/axiosInstance";
 import { useDispatch } from 'react-redux';
-import { setActivePresale, setPresales, setSupportedCurrency, setTopTenWallets } from "./redux/bloxSlice";
+import { setActivePresale, setPresales, setSupportedCurrency, setTopTenWallets } from "./redux/bloxSlice"; 
+import DashBoard from "./components/mainhome/DashBoard";
 
 
 const App = () => {
@@ -55,6 +56,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/coming-soon" element={<ComingSoon />} />
+        <Route path="/dashboard" element={<DashBoard />} />
       </Routes>
       <Footer />
     </BrowserRouter>

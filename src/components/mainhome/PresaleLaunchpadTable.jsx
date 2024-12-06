@@ -1,7 +1,10 @@
 import React from 'react'
 import { getMe2DecimalPointsWithCommas } from '../../contracts';
+import { useSelector } from 'react-redux';
 
-const PresaleLaunchpadTable = ({ userDetail }) => {
+const PresaleLaunchpadTable = () => {
+    const userDetail = useSelector((state) => state.blox.userDetails);
+    const presales = useSelector((state) => state.blox.presales);
 
     function timeToDate(time) {
 
@@ -28,6 +31,9 @@ const PresaleLaunchpadTable = ({ userDetail }) => {
                             <div className="">Tokens</div>
                         </th>
                         <th className="text-left p-3 tracking-wider text-white font-medium">
+                            <div className="">TGT</div>
+                        </th>
+                        <th className="text-left p-3 tracking-wider text-white font-medium">
                             <div className="">Date</div>
                         </th>
                         {/* <th className="text-left p-3 tracking-wider text-white font-medium">
@@ -37,6 +43,10 @@ const PresaleLaunchpadTable = ({ userDetail }) => {
                 </thead>
                 <tbody className="">
                     {userDetail.map((user, index) => {
+                    const findPresale = presales.find(presale=>presale.presale_id===user.presale_id);
+                    const tge_unlock = findPresale?.tge_unlock || 0;
+                    // const TGTAmount = Number(user.amount) - Number(user.amount) * Number(tge_unlock) / 100;
+                    const TGTAmount = Number(user.amount) * Number(tge_unlock) / 100;
                         return (
                             <tr className='' style={{ borderBottom: '1px solid #000' }}>
                                 <td className="p-3">
@@ -52,6 +62,11 @@ const PresaleLaunchpadTable = ({ userDetail }) => {
                                 <td className="p-3">
                                     <div className="text-gray-400 font-normal">
                                         {getMe2DecimalPointsWithCommas(user.purchased_amount)} BLOX
+                                    </div>
+                                </td>
+                                <td className="p-3">
+                                    <div className="text-gray-400 font-normal">
+                                        {getMe2DecimalPointsWithCommas(TGTAmount)} BLOX
                                     </div>
                                 </td>
                                 <td className="p-3">

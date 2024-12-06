@@ -16,6 +16,7 @@ import bloxLogo from "../../assets/BLOX-SVG_LOGO.svg";
 // };
 const navigation = [
   { name: "Home", href: "https://bloxchain.network/", current: true, target: "_blank" },
+  { name: "Dashboard", href: "/dashboard", current: false, target: "" },
   { name: "How to Buy", href: "./#how-to-buy", current: false, target: "" },
   { name: "Referral", href: "./#Referral", current: false, target: "" },
   { name: "Docs", href: "https://bloxnetwork.gitbook.io/bloxnetwork", current: false, target: "_blank" },
@@ -48,7 +49,7 @@ const Header = () => {
                 </Link>
               </div>
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-10 flex items-baseline space-x-3">
                   {navigation.map((item) => (
                     <Link target={item.target}
                       key={item.name}
@@ -58,7 +59,7 @@ const Header = () => {
                         item.current
                           ? "text-Greens"
                           : "text-gray-400 hover:text-green-500",
-                        "rounded-md px-3 py-2 text-sm font-normal"
+                        "rounded-md px-2 py-2 text-sm font-normal"
                       )}
                     >
                       {item.name}

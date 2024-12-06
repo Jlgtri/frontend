@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
-import mobilesimg from "../../assets/blox-icon.png";
 import logoBlackbase from "../../assets/base.svg";
+import mobilesimg from "../../assets/blox-icon.png";
 
 const HowtoBuy = () => {
   return (
@@ -307,37 +307,6 @@ const HowtoBuy = () => {
                         </div>
                         <div className="heading text-2xl text-white font-medium">
                           Buy with ETH in Base
-                        </div>
-                      </div>
-                      <div className="text-content text-white font-normal text-sm">
-                        <ul className="ml-4 list-disc">
-                          <li className="mb-2">
-                            Enter amount of currency/token
-                          </li>
-                          <li className="mb-2">Press "Buy Now" button</li>
-                          <li className="mb-2">
-                            Check "Metamask" and "Use default" in custom
-                            spending cap
-                          </li>
-                          <li className="mb-2">Click "Next" and "Approve" </li>
-                          <li className="mb-2">Wait for confirmation</li>
-                          <li className="mb-2">Click "Approve" again</li>
-                        </ul>
-                      </div>
-                    </div>
-                  </Grid>
-                  <Grid item lg="4" md="4" sm="6" xs="12">
-                    <div className="bg-color252525 p-4 rounded-xl h-full">
-                      <div className="flex items-center gap-3 justify-start mb-4">
-                        <div className="img_row w-16 h-16 bg-black rounded-lg flex items-center justify-center">
-                          <img
-                            src={require("../../assets/Linea.png")}
-                            className="rounded-lg w-12 h-12 object-cover"
-                            alt=""
-                          />
-                        </div>
-                        <div className="heading text-2xl text-white font-medium">
-                          Buy with ETH in Linea
                         </div>
                       </div>
                       <div className="text-content text-white font-normal text-sm">

@@ -1,7 +1,7 @@
-import { Container, Grid } from '@mui/material';
-import React, { useState } from 'react'
 import AddOutlinedIcon from '@mui/icons-material/AddOutlined';
 import HorizontalRuleOutlinedIcon from '@mui/icons-material/HorizontalRuleOutlined';
+import { Container, Grid } from '@mui/material';
+import React, { useState } from 'react';
 
 const AccordionItem = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
