@@ -1,9 +1,9 @@
+import React, { useState, useEffect } from "react";
 import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/react";
 import { CheckIcon, ChevronUpDownIcon } from "@heroicons/react/20/solid";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useAccount } from "wagmi";
+import { useSelector, useDispatch } from "react-redux";
 import { setSelectedCurrency } from "../../../redux/bloxSlice";
+import { useAccount } from "wagmi";
 
 const SelectedToken = () => {
     const { chainId } = useAccount();

@@ -1,10 +1,10 @@
+import React from "react";
 import {
   Disclosure,
   DisclosureButton,
   DisclosurePanel,
 } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
-import React from "react";
 // import { Link } from "react-router-dom";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { HashLink as Link } from "react-router-hash-link";
@@ -17,8 +17,8 @@ import bloxLogo from "../../assets/BLOX-SVG_LOGO.svg";
 const navigation = [
   { name: "Home", href: "https://bloxchain.network/", current: true, target: "_blank" },
   { name: "Dashboard", href: "/dashboard", current: false, target: "" },
-  { name: "How to Buy", href: "./#how-to-buy", current: false, target: "" },
-  { name: "Referral", href: "./#Referral", current: false, target: "" },
+  { name: "How to Buy", href: "./#how-to-buy", current: false, target: "" }, 
+  { name: "Referral", href: "./#Referral", current: false, target: "" }, 
   { name: "Docs", href: "https://bloxnetwork.gitbook.io/bloxnetwork", current: false, target: "_blank" },
   { name: "Roadmap", href: "https://bloxchain.network/roadmap/", current: false, target: "_blank" },
   { name: "Bloxomics", href: "https://bloxnetwork.gitbook.io/bloxnetwork/bloxomics", current: false, target: "_blank" },

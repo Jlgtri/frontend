@@ -110,7 +110,7 @@ const PresaleLaunchpad = ({ presale }) => {
                             {presale.map((item, index) => {
                                 if (item.name !== "Private Sale") {
                                     return (
-
+                                        
                                         <Grid item lg="6" md="6" sm="12" xs="12">
                                             <div className="rounded-lg gradientBorder">
                                                 <Box className="bg-color191919 rounded-lg p-4 h-full">

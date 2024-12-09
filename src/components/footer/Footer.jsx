@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import bloxLogo from "../../assets/BLOX-SVG_LOGO.svg";
 
-import coinmarketcap from '../../assets/iconsS/coinmarketcap-1.svg';
-import discord from '../../assets/iconsS/discover.svg';
-import linkdin from '../../assets/iconsS/linkdin.svg';
-import medialog from '../../assets/iconsS/m.svg';
-import telegram from '../../assets/iconsS/telegram.svg';
-import twitter from '../../assets/iconsS/twitter.svg';
-import youtube from '../../assets/iconsS/youtube.svg';
+import telegram from '../../assets/iconsS/telegram.svg'
+import youtube from '../../assets/iconsS/youtube.svg'
+import coinmarketcap from '../../assets/iconsS/coinmarketcap-1.svg'
+import twitter from '../../assets/iconsS/twitter.svg'
+import medialog from '../../assets/iconsS/m.svg'
+import discord from '../../assets/iconsS/discover.svg'
+import linkdin from '../../assets/iconsS/linkdin.svg'
 
 const Footer = () => {
     return (
@@ -16,25 +16,25 @@ const Footer = () => {
             <div class="flex mt-4 lg:justify-center md:justify-center sm:justify-center justify-center sm:mt-0 lg:gap-3 md:gap-3 sm:gap-2 gap-2">
                 <Link to="https://t.me/bloxnetwork" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={telegram} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://www.youtube.com/@BLOXNetworkY" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={youtube} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://coinmarketcap.com/community/profile/BLOXNETWORK/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={coinmarketcap} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://x.com/BloxNetworkX" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={twitter} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://bloxnetworkm.medium.com/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={medialog} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://discord.com/invite/CDXuMcTV" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={discord} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
                 <Link to="https://www.linkedin.com/in/blox-network-26b3a2325/" target="_blank" class="text-green-500 hover:text-green-500 transition-all hover:-mt-2 bg-neutral-900 lg:w-14 md:w-14 sm:w-11 w-11 lg:h-14 md:h-14 sm:h-11 h-11 flex items-center justify-center rounded-full">
                     <img src={linkdin} className="w-6 h-6 animate-pulse" />
-                </Link>
+                </Link> 
             </div>
             <footer class="mt-10">
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
@@ -130,9 +130,9 @@ const Footer = () => {
                                     </li>
                                     <li class="mb-4">
                                         <Link target="_blank" to="./#Referral" class="hover:text-white transition-all text-footertext font-normal no-underline text-sm">
-                                            Referral
+                                        Referral
                                         </Link>
-
+                                    
                                     </li>
                                 </ul>
                             </div>
@@ -157,9 +157,9 @@ const Footer = () => {
                     <hr class="my-6 sm:mx-auto border-black lg:my-8" />
 
                     <div class="sm:flex sm:items-center sm:justify-between justify-center text-center">
-
+                         
                         <span class="flex items-center justify-center text-sm text-gray-500 sm:text-center">
-                            © 2024
+                            © 2024 
                             <Link to="/" class="hover:text-green-500 transition-all">
                                 BLOX ICO
                             </Link>

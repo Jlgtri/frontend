@@ -1,13 +1,14 @@
 .progress-bar {
-  width: 100%;
-  background-color: var(--text-color-111);
-  border-radius: 25px;
-  overflow: hidden;
-}
-
-.progress-bar-fill {
-  height: 8px;
-  background: linear-gradient(to right, var(--green-Color), #54a6c4, #ad5ef6, #59f0ea);
-  transition: width 0.2s ease-in;
-  border-radius: 25px;
-}
+    width: 100%;
+    background-color: var(--text-color-111);
+    border-radius: 25px;
+    overflow: hidden;
+  }
+  
+  .progress-bar-fill {
+    height: 8px;
+    background: linear-gradient(to right, var(--green-Color), #54a6c4, #ad5ef6, #59f0ea);
+    transition: width 0.2s ease-in;
+    border-radius: 25px;
+  }
+  

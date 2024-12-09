@@ -1,7 +1,7 @@
 import { Container, Grid } from "@mui/material";
 import React from "react";
-import logoBlackbase from "../../assets/base.svg";
 import mobilesimg from "../../assets/blox-icon.png";
+import logoBlackbase from "../../assets/base.svg";
 
 const HowtoBuy = () => {
   return (
