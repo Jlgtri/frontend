@@ -7,6 +7,7 @@ export const axiosInstance = axios.create({
     timeout: 30000,
     headers: { 'Content-Type': 'application/json' },
 });
+  
 
 const callApi = async ({ method = 'GET', url, data }) => {
     try {
@@ -15,10 +16,8 @@ const callApi = async ({ method = 'GET', url, data }) => {
             url,
             data,
         };
-
         // Make the API call
         const response = await axiosInstance(config);
-
         // Return the response data
         return response.data;
     } catch (error) {

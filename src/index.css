@@ -24,6 +24,7 @@ body {
   /* font-family: "Poppins", sans-serif; */
   font-family: "Helvetica Neue", sans-serif !important; 
 }
+
 .ConnectButton button {
   background-image: linear-gradient(90deg, #00ff91, #00bd6b) !important;
   color: var(--bg-Greys) !important;
@@ -343,6 +344,38 @@ button {
  
 /* coming soon css page  */
 
+
+/* deshboard css page  */
+
+.climButton{
+  color: var(--bg-Greys) !important;
+  font-weight: 500 !important;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none !important;
+  cursor: not-allowed;
+  background-image: linear-gradient(90deg, #00ff91, #00bd6b) !important;
+}
+.rounddiv{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ gap: 10px;
+}
+.downIcon{
+  font-size: 1.4rem;
+  color: #00cf75;
+}
+.purchased_total{
+  margin-left: 5px;
+  font-size: 19px;
+}
+.roundboxmain{
+  overflow: auto;
+}
+
 /* media screen css start here */
 
 @media only screen and (max-width: 480px) {
@@ -378,9 +411,13 @@ button {
   .blox-token-img {
     left: 0;
   }
+  .tokentd{
+    min-width: 150px;
+  }
 }
 
 @media only screen and (min-width: 481px) and (max-width: 768px) {
+
 }
 
 /* media screen css end here  */
